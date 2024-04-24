@@ -1,0 +1,23 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v8.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v8.0": {
+      "PLX_reader_console/1.0.0": {
+        "runtime": {
+          "PLX_reader_console.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "PLX_reader_console/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}

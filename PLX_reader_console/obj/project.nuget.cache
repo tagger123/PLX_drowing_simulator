@@ -1,0 +1,15 @@
+{
+  "version": 2,
+  "dgSpecHash": "HmifYZnnhP66SauIqwpCxdtUSdZnVnuyNIkaki9vnP7nUJO2g2ihkiB0+csm+ClpdTR5xVYSmF3c2O91plCjaQ==",
+  "success": true,
+  "projectFilePath": "D:\\1_Michal_Sawczuk\\programming\\PLX_reader_console\\PLX_reader_console.csproj",
+  "expectedPackageFiles": [],
+  "logs": [
+    {
+      "code": "NU1803",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "You are running the 'restore' operation with an 'HTTP' source, 'http://nuget.syncfusion.com/nuget_wpf/nuget/getsyncfusionpackages/wpf'. Non-HTTPS access will be removed in a future version. Consider migrating to an 'HTTPS' source."
+    }
+  ]
+}
