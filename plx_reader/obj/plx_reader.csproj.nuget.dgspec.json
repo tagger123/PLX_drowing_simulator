@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "D:\\1_Michal_Sawczuk\\programming\\plx_reader\\plx_reader.csproj": {}
+    "D:\\1_Michal_Sawczuk\\programming\\PLX_drowing\\PLX_drowing_simulator\\plx_reader\\plx_reader.csproj": {}
   },
   "projects": {
-    "D:\\1_Michal_Sawczuk\\programming\\plx_reader\\plx_reader.csproj": {
+    "D:\\1_Michal_Sawczuk\\programming\\PLX_drowing\\PLX_drowing_simulator\\plx_reader\\plx_reader.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\1_Michal_Sawczuk\\programming\\plx_reader\\plx_reader.csproj",
+        "projectUniqueName": "D:\\1_Michal_Sawczuk\\programming\\PLX_drowing\\PLX_drowing_simulator\\plx_reader\\plx_reader.csproj",
         "projectName": "plx_reader",
-        "projectPath": "D:\\1_Michal_Sawczuk\\programming\\plx_reader\\plx_reader.csproj",
+        "projectPath": "D:\\1_Michal_Sawczuk\\programming\\PLX_drowing\\PLX_drowing_simulator\\plx_reader\\plx_reader.csproj",
         "packagesPath": "C:\\Users\\user\\.nuget\\packages\\",
-        "outputPath": "D:\\1_Michal_Sawczuk\\programming\\plx_reader\\obj\\",
+        "outputPath": "D:\\1_Michal_Sawczuk\\programming\\PLX_drowing\\PLX_drowing_simulator\\plx_reader\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"

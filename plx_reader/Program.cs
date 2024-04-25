@@ -17,14 +17,5 @@ namespace plx_reader
 			ApplicationConfiguration.Initialize();
 			Application.Run(new Form1());
 		}
-
-		public class numLine
-		{
-			StreamReader reader = new StreamReader(@"D:\\1_Michal_Sawczuk\\programming\\PLX_drowing\\602\\test.plx");
-			string line;
-			int lineNum = 0;
-			//filtrowanie calego pliku tekstowego 
-			while 
-		}
 	}
 }

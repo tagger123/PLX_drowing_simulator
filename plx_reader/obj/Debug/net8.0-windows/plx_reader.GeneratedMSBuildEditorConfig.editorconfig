@@ -14,6 +14,6 @@ build_property.PlatformNeutralAssembly =
 build_property.EnforceExtendedAnalyzerRules = 
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = plx_reader
-build_property.ProjectDir = D:\1_Michal_Sawczuk\programming\plx_reader\
+build_property.ProjectDir = D:\1_Michal_Sawczuk\programming\PLX_drowing\PLX_drowing_simulator\plx_reader\
 build_property.EnableComHosting = 
 build_property.EnableGeneratedComInterfaceComImportInterop = 

@@ -31,11 +31,6 @@ class Program
 						Console.WriteLine("Element lenght:" + float.Parse(parameters[6], CultureInfo.InvariantCulture));
 						Console.WriteLine("Element width:" + float.Parse(parameters[7], CultureInfo.InvariantCulture));
 					}
-					else if (line.Contains("12:"))
-					{
-						string[] itemName = line.Split(':');
-						Console.WriteLine(itemName[7]);
-					}
 				}
 					
 			}

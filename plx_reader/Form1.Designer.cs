@@ -28,30 +28,59 @@
 		/// </summary>
 		private void InitializeComponent()
 		{
-			panel1 = new Panel();
+			panel2 = new Panel();
+			backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
+			textBox1 = new TextBox();
+			button1 = new Button();
 			SuspendLayout();
 			// 
-			// panel1
+			// panel2
 			// 
-			panel1.Location = new Point(1, 13);
-			panel1.Name = "panel1";
-			panel1.Size = new Size(1419, 592);
-			panel1.TabIndex = 0;
-			panel1.Paint += panel1_Paint;
+			panel2.Location = new Point(12, 47);
+			panel2.Name = "panel2";
+			panel2.Size = new Size(5000, 385);
+			panel2.TabIndex = 1;
+			panel2.DragDrop += DragDrop;
+			panel2.DragOver += DragOver;
+			panel2.Paint += panel2_Paint;
+			// 
+			// textBox1
+			// 
+			textBox1.AllowDrop = true;
+			textBox1.Location = new Point(12, 12);
+			textBox1.Name = "textBox1";
+			textBox1.Size = new Size(665, 23);
+			textBox1.TabIndex = 0;
+			// 
+			// button1
+			// 
+			button1.Location = new Point(683, 12);
+			button1.Name = "button1";
+			button1.Size = new Size(75, 23);
+			button1.TabIndex = 2;
+			button1.Text = "Open";
+			button1.UseVisualStyleBackColor = true;
 			// 
 			// Form1
 			// 
 			AutoScaleDimensions = new SizeF(7F, 15F);
 			AutoScaleMode = AutoScaleMode.Font;
-			ClientSize = new Size(1422, 607);
-			Controls.Add(panel1);
+			AutoScroll = true;
+			AutoScrollMinSize = new Size(50000, 50);
+			ClientSize = new Size(984, 461);
+			Controls.Add(button1);
+			Controls.Add(textBox1);
+			Controls.Add(panel2);
 			Name = "Form1";
 			Text = "Form1";
 			ResumeLayout(false);
+			PerformLayout();
 		}
 
 		#endregion
-
-		private Panel panel1;
+		private Panel panel2;
+		private System.ComponentModel.BackgroundWorker backgroundWorker1;
+		private TextBox textBox1;
+		private Button button1;
 	}
 }
