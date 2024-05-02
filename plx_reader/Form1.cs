@@ -15,54 +15,34 @@ namespace plx_reader
 		{
 			InitializeComponent();
 		}
-		private void panel2_Paint(object sender, PaintEventArgs e)
+		private void button1_Click(object sender, EventArgs e)
 		{
-			try
-			{
-				string path;
-				using (StreamReader reader = new StreamReader(@"D:\\1_Michal_Sawczuk\\programming\\PLX_drowing\\A9B10434387\\A9B10434387(1270)+2%.plx"))
-				{
-					Pen blkpen = new Pen(Color.Black, 2);
-					string line;
-					//filtrowanie calego pliku tekstowego 
-					while ((line = reader.ReadLine()) != null)
-					{
-						//usuwanie elementow ktore sa w programie ale nie sa wykorzystane
-						if (line.Contains("-"))
-						{
-							continue;
-						}
-						//wyciaganie danych z lini 15 (linia odpowiedzialna za polozenie i wymiary)
-						else if (line.Contains("15:"))
-						{
-							string[] parameters = line.Split(':');
-							float xPos   = (float.Parse(parameters[2], CultureInfo.InvariantCulture) / 100);
-							float yPos   = (float.Parse(parameters[4], CultureInfo.InvariantCulture) / 100);
-							float width  = (float.Parse(parameters[6], CultureInfo.InvariantCulture) / 100);
-							float height = (float.Parse(parameters[7], CultureInfo.InvariantCulture) / 100);
-							e.Graphics.DrawRectangle(blkpen, xPos, yPos, width, height);
-						}
-					}
-
-				}
-			}
-			catch (Exception ex)
-			{
-			}
+			string TextBoxPathPLX = textBox1.Text;
+			Form2 DrawForm = new Form2();
+			Form3 Items = new Form3();
+			DrawForm.pathPLX = TextBoxPathPLX;
+			DrawForm.Show();
+			Items.pathPLX = TextBoxPathPLX;
+			Items.Show();
 		}
-		private void DragOver(object sender, DragEventArgs e)
+		private void textBox_DragEnter(object sender, DragEventArgs e)
 		{
 			if (e.Data.GetDataPresent(DataFormats.FileDrop))
-				e.Effect = DragDropEffects.Link;
+			{
+				e.Effect = DragDropEffects.Copy;
+			}
 			else
+			{
 				e.Effect = DragDropEffects.None;
+			}
 		}
-
-		private void DragDrop(object sender, DragEventArgs e)
+		private void textBox_DragDrop(object sender, DragEventArgs e)
 		{
-			string[] files = e.Data.GetData(DataFormats.FileDrop) as string[]; // get all files droppeds  
-			if (files != null && files.Any())
-				textBox1.Text = files.First(); //select the first one  
+			if (e.Data.GetDataPresent(DataFormats.FileDrop))
+			{
+				string[] filePaths = (string[])(e.Data.GetData(DataFormats.FileDrop));
+				textBox1.Text = filePaths[0];
+			}
 		}
 	}
 }

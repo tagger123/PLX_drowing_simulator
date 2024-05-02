@@ -28,59 +28,55 @@
 		/// </summary>
 		private void InitializeComponent()
 		{
-			panel2 = new Panel();
-			backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
 			textBox1 = new TextBox();
 			button1 = new Button();
+			fileSystemWatcher1 = new FileSystemWatcher();
+			((System.ComponentModel.ISupportInitialize)fileSystemWatcher1).BeginInit();
 			SuspendLayout();
-			// 
-			// panel2
-			// 
-			panel2.Location = new Point(12, 47);
-			panel2.Name = "panel2";
-			panel2.Size = new Size(5000, 385);
-			panel2.TabIndex = 1;
-			panel2.DragDrop += DragDrop;
-			panel2.DragOver += DragOver;
-			panel2.Paint += panel2_Paint;
 			// 
 			// textBox1
 			// 
 			textBox1.AllowDrop = true;
-			textBox1.Location = new Point(12, 12);
+			textBox1.Location = new Point(12, 27);
 			textBox1.Name = "textBox1";
 			textBox1.Size = new Size(665, 23);
 			textBox1.TabIndex = 0;
+			textBox1.DragDrop += textBox_DragDrop;
+			textBox1.DragEnter += textBox_DragEnter;
 			// 
 			// button1
 			// 
-			button1.Location = new Point(683, 12);
+			button1.Location = new Point(683, 26);
 			button1.Name = "button1";
 			button1.Size = new Size(75, 23);
 			button1.TabIndex = 2;
 			button1.Text = "Open";
 			button1.UseVisualStyleBackColor = true;
+			button1.Click += button1_Click;
+			// 
+			// fileSystemWatcher1
+			// 
+			fileSystemWatcher1.EnableRaisingEvents = true;
+			fileSystemWatcher1.SynchronizingObject = this;
 			// 
 			// Form1
 			// 
 			AutoScaleDimensions = new SizeF(7F, 15F);
 			AutoScaleMode = AutoScaleMode.Font;
 			AutoScroll = true;
-			AutoScrollMinSize = new Size(50000, 50);
-			ClientSize = new Size(984, 461);
+			ClientSize = new Size(766, 80);
 			Controls.Add(button1);
 			Controls.Add(textBox1);
-			Controls.Add(panel2);
 			Name = "Form1";
 			Text = "Form1";
+			((System.ComponentModel.ISupportInitialize)fileSystemWatcher1).EndInit();
 			ResumeLayout(false);
 			PerformLayout();
 		}
 
 		#endregion
-		private Panel panel2;
-		private System.ComponentModel.BackgroundWorker backgroundWorker1;
 		private TextBox textBox1;
 		private Button button1;
+		private FileSystemWatcher fileSystemWatcher1;
 	}
 }

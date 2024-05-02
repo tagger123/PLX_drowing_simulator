@@ -31,3 +31,5 @@ D:\1_Michal_Sawczuk\programming\PLX_drowing\PLX_drowing_simulator\plx_reader\bin
 D:\1_Michal_Sawczuk\programming\PLX_drowing\PLX_drowing_simulator\plx_reader\bin\Debug\net8.0-windows\plx_reader.pdb
 D:\1_Michal_Sawczuk\programming\PLX_drowing\PLX_drowing_simulator\plx_reader\obj\Debug\net8.0-windows\plx_reader.genruntimeconfig.cache
 D:\1_Michal_Sawczuk\programming\PLX_drowing\PLX_drowing_simulator\plx_reader\obj\Debug\net8.0-windows\ref\plx_reader.dll
+D:\1_Michal_Sawczuk\programming\PLX_drowing\PLX_drowing_simulator\plx_reader\obj\Debug\net8.0-windows\plx_reader.Form2.resources
+D:\1_Michal_Sawczuk\programming\PLX_drowing\PLX_drowing_simulator\plx_reader\obj\Debug\net8.0-windows\plx_reader.Form3.resources

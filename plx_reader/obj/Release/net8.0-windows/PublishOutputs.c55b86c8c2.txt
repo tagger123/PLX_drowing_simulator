@@ -1,0 +1,5 @@
+D:\1_Michal_Sawczuk\programming\PLX_drowing\PLX_drowing_simulator\plx_reader\bin\Release\net8.0-windows\publish\plx_reader.exe
+D:\1_Michal_Sawczuk\programming\PLX_drowing\PLX_drowing_simulator\plx_reader\bin\Release\net8.0-windows\publish\plx_reader.dll
+D:\1_Michal_Sawczuk\programming\PLX_drowing\PLX_drowing_simulator\plx_reader\bin\Release\net8.0-windows\publish\plx_reader.deps.json
+D:\1_Michal_Sawczuk\programming\PLX_drowing\PLX_drowing_simulator\plx_reader\bin\Release\net8.0-windows\publish\plx_reader.runtimeconfig.json
+D:\1_Michal_Sawczuk\programming\PLX_drowing\PLX_drowing_simulator\plx_reader\bin\Release\net8.0-windows\publish\plx_reader.pdb
