@@ -20,6 +20,13 @@ namespace plx_reader
 			InitializeComponent();
 		}
 		public string pathPLX { get; set; }
+		public int length { get; set; }
+		public int width { get; set; }
+		public int ItemNumber14 { get; set; }
+		public int ItemNumber15 { get; set; }
+		public string ItemName { get; set; }
+		public float xPos { get; set; }
+		public float yPos { get; set; }	
 		public void panel1_Paint_1(object sender, PaintEventArgs e)
 		{
 			using (StreamReader reader = new StreamReader(pathPLX))
@@ -36,26 +43,44 @@ namespace plx_reader
 					{
 						continue;
 					}
-					else if (line.StartsWith("7:"))
+					else if (line.StartsWith("5:"))
 					{
 						string[] xlen = line.Split(':');
-						int x1 = int.Parse(xlen[3]);
-						int x2 = x1 / 100;
-						panel1.Size = new Size(x2, 425);
+						int x = int.Parse(xlen[3]);
+						length = x / 50;
+					}
+					else if (line.StartsWith("7:"))
+					{
+						string[] ylen = line.Split(":");
+						int y = int.Parse(ylen[2]);
+						width = y / 50;
+					}
+					else if (line.StartsWith("14:"))
+					{
+						string[] parameters = line.Split(":");
+						string ItemNumberHelp14 = parameters[1];
+						string ItemNameHelp = parameters[4];
+						ItemNumber14 = int.Parse(ItemNumberHelp14);
+						ItemName = ItemNameHelp;
 					}
 					//wyciaganie danych z lini 15 (linia odpowiedzialna za polozenie i wymiary)
 					else if (line.StartsWith("15:"))
 					{
-						string[] parameters = line.Split(':');
-						string nameNumber = parameters[1];
-						float xPos = (float.Parse(parameters[2], CultureInfo.InvariantCulture) / 100);
-						float yPos = (float.Parse(parameters[4], CultureInfo.InvariantCulture) / 100);
-						float width = (float.Parse(parameters[6], CultureInfo.InvariantCulture) / 100);
-						float height = (float.Parse(parameters[7], CultureInfo.InvariantCulture) / 100);
-						e.Graphics.DrawRectangle(blkpen, xPos, yPos, width, height);
-						e.Graphics.DrawString(nameNumber, drawFont, drawBrush, xPos, yPos);
+						string[] parameters2 = line.Split(':');
+						string ItemNumberHelp15 = parameters2[1];
+						ItemNumber15 = int.Parse(ItemNumberHelp15);
+						float xPosHelp = (float.Parse(parameters2[2], CultureInfo.InvariantCulture) / 50);
+						float yPosHelp = (float.Parse(parameters2[4], CultureInfo.InvariantCulture) / 50);
+						xPos = xPosHelp;
+						yPos = yPosHelp;
+						float x2Pos = (float.Parse(parameters2[6], CultureInfo.InvariantCulture) / 50);
+						float y2Pos = (float.Parse(parameters2[7], CultureInfo.InvariantCulture) / 50);
+						e.Graphics.DrawRectangle(blkpen, xPosHelp, yPosHelp, x2Pos, y2Pos);
+						e.Graphics.DrawString(ItemNumberHelp15, drawFont, drawBrush, xPos, yPos);
 					}
 				}
+				e.Graphics.DrawRectangle(blkpen, 0, 0, length, width);
+				panel1.Size = new Size(length + 100, width);
 			}
 		}
 	}

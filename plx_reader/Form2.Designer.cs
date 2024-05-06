@@ -33,9 +33,10 @@
 			// 
 			// panel1
 			// 
-			panel1.Location = new Point(12, 12);
+			panel1.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
+			panel1.Location = new Point(12, 25);
 			panel1.Name = "panel1";
-			panel1.Size = new Size(780, 425);
+			panel1.Size = new Size(780, 575);
 			panel1.TabIndex = 0;
 			panel1.Paint += panel1_Paint_1;
 			// 
@@ -45,7 +46,7 @@
 			AutoScaleMode = AutoScaleMode.Font;
 			AutoScroll = true;
 			AutoScrollMinSize = new Size(50, 50);
-			ClientSize = new Size(806, 466);
+			ClientSize = new Size(806, 612);
 			Controls.Add(panel1);
 			Name = "Form2";
 			Text = "Form2";

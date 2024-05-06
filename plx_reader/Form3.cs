@@ -31,16 +31,27 @@ namespace plx_reader
 				//filtrowanie calego pliku tekstowego 
 				while ((line = reader.ReadLine()) != null)
 				{
+					if (line.StartsWith("7:")){
+						string[] name = line.Split(':');
+						int width = int.Parse(name[2]) / 10;
+						int lenght = int.Parse(name[3]) / 10;
+						e.Graphics.DrawString("Szerokość:" + width, drawFont, drawBrush, x, y);
+						e.Graphics.DrawLine(blkpen, x, y + 25, Width, y + 25);
+					}
 					//wyciaganie danych z lini 14 (linia odpowiedzialna za polozenie i wymiary)
-					if (line.StartsWith("14:"))
+					else if (line.StartsWith("14:"))
 					{
 						string[] name = line.Split(':');
 						string ItemName = name[4];
 						string ItemNumber = name[1];
-						e.Graphics.DrawString(ItemNumber + ":" + ItemName, drawFont, drawBrush, x, y);
-						e.Graphics.DrawLine(blkpen, x, y + 25, Width, y + 25);
-						y += 23;
-						length = y + y;
+						int exist = int.Parse(name[9]);
+						if (exist != 7)
+						{
+							y += 23;
+							e.Graphics.DrawString(ItemNumber + ":" + ItemName, drawFont, drawBrush, x, y);
+							e.Graphics.DrawLine(blkpen, x, y + 25, Width, y + 25);
+							length = y + y;
+						}
 					}
 				}
 				panel1.Size = new Size(250, length);

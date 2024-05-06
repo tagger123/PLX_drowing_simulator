@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("plx_reader")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+40cc21d73e22465c1d1c08b8abf2bb348d0c7c42")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+ff9bdb4dacd75c15a34bf38106b156e0e77b9296")]
 [assembly: System.Reflection.AssemblyProductAttribute("plx_reader")]
 [assembly: System.Reflection.AssemblyTitleAttribute("plx_reader")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
